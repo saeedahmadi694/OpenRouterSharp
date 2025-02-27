@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<Nullable>enable</Nullable>
+		<Title>OpenRouterSharp.Core</Title>
+		<Version>1.0.1</Version>
+		<Authors>saeed ahmadi</Authors>
+		<Company>saeed ahmadi</Company>
+		<PackageId>OpenRouterSharp.Core</PackageId>
+		<Product>OpenRouterSharp.Core</Product>
+		<Description>Vandar end-poients</Description>
+		<RepositoryUrl>https://github.com/saeedahmadi694/OpenRouterSharp</RepositoryUrl>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="ExceptionHandler\**" />
+	  <Compile Remove="HtppHandler\**" />
+	  <EmbeddedResource Remove="ExceptionHandler\**" />
+	  <EmbeddedResource Remove="HtppHandler\**" />
+	  <None Remove="ExceptionHandler\**" />
+	  <None Remove="HtppHandler\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="System.Text.Json" Version="9.0.2" />
+	</ItemGroup>
+
+
+
+</Project>
