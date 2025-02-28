@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRouter.Presenter", "OpenRouter.Presenter\OpenRouter.Presenter.csproj", "{E0916B63-710B-1202-BA8A-D326ED4A0B58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRouterSharp.AspNetCore", "OpenRouterSharp.AspNetCore\OpenRouterSharp.AspNetCore.csproj", "{3CE844D2-22C2-56B7-3D0B-56F067406C28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRouterSharp.Core", "OpenRouterSharp.Core\OpenRouterSharp.Core.csproj", "{3239209A-8FEC-0C83-4510-37728FCC7208}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0916B63-710B-1202-BA8A-D326ED4A0B58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0916B63-710B-1202-BA8A-D326ED4A0B58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0916B63-710B-1202-BA8A-D326ED4A0B58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0916B63-710B-1202-BA8A-D326ED4A0B58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CE844D2-22C2-56B7-3D0B-56F067406C28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE844D2-22C2-56B7-3D0B-56F067406C28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CE844D2-22C2-56B7-3D0B-56F067406C28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CE844D2-22C2-56B7-3D0B-56F067406C28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3239209A-8FEC-0C83-4510-37728FCC7208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3239209A-8FEC-0C83-4510-37728FCC7208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3239209A-8FEC-0C83-4510-37728FCC7208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3239209A-8FEC-0C83-4510-37728FCC7208}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC0A0EB8-449F-408F-8295-12C38FD33B74}
+	EndGlobalSection
+EndGlobal

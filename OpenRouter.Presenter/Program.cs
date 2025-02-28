@@ -4,12 +4,13 @@ using OpenRouterSharp.Core.Repositories;
 
 Console.WriteLine("Hello, World!");
 
-string apiKey = "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";
-string baseUrl = "https://openrouter.ai/api/v1/chat/completions";
+string apiKey = "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";
+string baseUrl = "https://openrouter.ai/api/v1";
 
 var chatService = new OpenRouterChatService(baseUrl,apiKey);
-var chatRequest = new ChatRequest
+var chatRequest = new PropmtRequest
 {
+    Prompt = "hi who are you ?",
     Model = "deepseek/deepseek-r1:free", // Using the online version to allow web search
     //Models = new List<string> { "deepseek/deepseek-r1:free" }, // Model fallback
     //Route = "fallback", // Optional fallback routing
@@ -30,9 +31,9 @@ var chatRequest = new ChatRequest
     //                SearchPrompt = "Here are some relevant web results. Please incorporate them into your answer and cite the sources using markdown links."
     //            }
     //        ],
-    Messages = [new Message { Role = "user", Content = "What is the latest trend in AI for 2025?" }]
+    //messages = [new Message { role = "user", content = "What is the latest trend in AI for 2025?" }]
 };
 
-ChatResponse response = await chatService.SendMessageAsync(chatRequest);
+var response = await chatService.SendMessageAsync(chatRequest);
 //Console.WriteLine($"Used Model: {response.Model}");
-Console.WriteLine(response.GetReply());
+Console.WriteLine(response.Message);

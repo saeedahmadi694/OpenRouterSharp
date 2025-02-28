@@ -6,6 +6,7 @@ namespace OpenRouterSharp.Core.InfraServices
 
     public interface IOpenRouterChatService
     {
-        Task<ChatResponse> SendMessageAsync(ChatRequest chatRequest);
+        Task<PropmtResponse> SendMessageAsync(PropmtRequest chatRequest);
+        Task<ChatResponse> ChatMessageAsync(ChatRequest chatRequest);
     }
 }
