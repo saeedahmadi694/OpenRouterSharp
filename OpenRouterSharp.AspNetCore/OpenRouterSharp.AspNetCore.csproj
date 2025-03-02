@@ -5,12 +5,12 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<Title>OpenRouterSharp.Core.AspNetCore</Title>
-		<Version>1.0.1</Version>
+		<Version>1.0.2</Version>
 		<Authors>saeed ahmadi</Authors>
 		<Company>saeed ahmadi</Company>
 		<PackageId>OpenRouterSharp.Core.AspNetCore</PackageId>
 		<Product>OpenRouterSharp.Core.AspNetCore</Product>
-		<Description>OpenRouterSharp Asp Net Core end-poients</Description>
+		<Description>Open Router service</Description>
 		<RepositoryUrl>https://github.com/saeedahmadi694/OpenRouterSharp</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>

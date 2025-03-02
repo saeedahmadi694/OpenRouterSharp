@@ -18,14 +18,18 @@ namespace OpenRouterSharp.Core.Models
     {
         [JsonPropertyName("messages")]
         public List<Message> Messages { get; set; }
-        [JsonPropertyName("models")]
-        public List<string> Models { get; set; } // Added for model routing
-        [JsonPropertyName("route")]
-        public string Route { get; set; } // Optional fallback routing
-        [JsonPropertyName("provider")]
-        public ProviderPreferences Provider { get; set; } // Added for provider routing
-        [JsonPropertyName("plugins")]
-        public List<Plugin> Plugins { get; set; } // Added plugin configuration
+
+        //[JsonPropertyName("models")]
+        //public List<string>? Models { get; set; } // Added for model routing
+
+        //[JsonPropertyName("route")]
+        //public string? Route { get; set; } // Optional fallback routing
+
+        //[JsonPropertyName("provider")]
+        //public ProviderPreferences? Provider { get; set; } // Added for provider routing
+
+        //[JsonPropertyName("plugins")]
+        //public List<Plugin>? Plugins { get; set; } // Added plugin configuration
     }
 
 }

@@ -8,14 +8,14 @@ namespace OpenRouterSharp.AspNetCore.DependencyInjection;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddVandarService(this IServiceCollection services, Action<OpenRouterSetting> configure)
+    public static IServiceCollection AddOpenRouterService(this IServiceCollection services, Action<OpenRouterSetting> configure)
     {
         services.Configure(configure);
 
-        services.AddScoped((Func<IServiceProvider, IOpenRouterChatService>)(sp =>
+        services.AddScoped((Func<IServiceProvider, IOpenRouterService>)(sp =>
         {
             var setting = sp.GetRequiredService<IOptionsMonitor<OpenRouterSetting>>().CurrentValue;
-            return new OpenRouterChatService(
+            return new OpenRouterService(
                 setting.BaseUrl,
                 setting.ApiKey
             );

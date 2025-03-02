@@ -5,7 +5,6 @@ using System.Text;
 using OpenRouterSharp.Core.Models;
 using OpenRouterSharp.Core.InfraServices;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace OpenRouterSharp.Core.Repositories
