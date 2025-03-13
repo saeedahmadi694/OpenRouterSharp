@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<Title>OpenRouterSharp.Core.AspNetCore</Title>
-		<Version>1.0.2</Version>
+		<Version>1.0.3</Version>
 		<Authors>saeed ahmadi</Authors>
 		<Company>saeed ahmadi</Company>
 		<PackageId>OpenRouterSharp.Core.AspNetCore</PackageId>
@@ -16,8 +16,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Options" Version="9.0.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.3" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="9.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
