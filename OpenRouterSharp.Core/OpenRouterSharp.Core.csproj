@@ -4,7 +4,7 @@
 		<TargetFramework>netstandard2.1</TargetFramework>
 		<Nullable>enable</Nullable>
 		<Title>OpenRouterSharp.Core</Title>
-		<Version>1.0.2</Version>
+		<Version>1.0.3</Version>
 		<Authors>saeed ahmadi</Authors>
 		<Company>saeed ahmadi</Company>
 		<PackageId>OpenRouterSharp.Core</PackageId>
@@ -23,6 +23,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Http" Version="9.0.3" />
 		<PackageReference Include="System.Text.Json" Version="9.0.2" />
 	</ItemGroup>
 

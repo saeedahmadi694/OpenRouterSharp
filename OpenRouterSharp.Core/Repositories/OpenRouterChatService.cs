@@ -9,29 +9,31 @@ using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace OpenRouterSharp.Core.Repositories
 {
-
     public class OpenRouterChatService : IOpenRouterChatService
     {
+        private readonly HttpClient _httpClient;
         private readonly string _apiKey;
         private readonly string _baseUrl;
-        private static readonly HttpClient _httpClient = new HttpClient();
-        public OpenRouterChatService(string baseUrl, string apiKey)
+
+        public OpenRouterChatService(HttpClient httpClient, string baseUrl, string apiKey)
         {
-            _apiKey = apiKey;
+            _httpClient = httpClient;
             _baseUrl = baseUrl;
-            _httpClient.Timeout = TimeSpan.FromMinutes(2);
+            _apiKey = apiKey;
+
+            // Add the Authorization header once per instance
+            _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {_apiKey}");
         }
 
         public async Task<PropmtResponse> SendMessageAsync(PropmtRequest chatRequest)
         {
             var requestJson = JsonSerializer.Serialize(chatRequest);
             var content = new StringContent(requestJson, Encoding.UTF8, "application/json");
-            //_httpClient.DefaultRequestHeaders.Clear();
-            _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {_apiKey}");
 
-            var response = await _httpClient.PostAsync(_baseUrl + "/completions", content);
+            var response = await _httpClient.PostAsync($"{_baseUrl}/completions", content);
+            response.EnsureSuccessStatusCode();
+
             var responseJson = await response.Content.ReadAsStringAsync();
-
             return JsonSerializer.Deserialize<PropmtResponse>(responseJson, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
         }
 
@@ -39,13 +41,13 @@ namespace OpenRouterSharp.Core.Repositories
         {
             var requestJson = JsonSerializer.Serialize(chatRequest);
             var content = new StringContent(requestJson, Encoding.UTF8, "application/json");
-            //_httpClient.DefaultRequestHeaders.Clear();
-            _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {_apiKey}");
 
-            var response = await _httpClient.PostAsync(_baseUrl + "/chat/completions", content);
+            var response = await _httpClient.PostAsync($"{_baseUrl}/chat/completions", content);
+            response.EnsureSuccessStatusCode();
+
             var responseJson = await response.Content.ReadAsStringAsync();
-
             return JsonSerializer.Deserialize<ChatResponse>(responseJson, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
         }
     }
+
 }

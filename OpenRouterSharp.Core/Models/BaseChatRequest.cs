@@ -7,11 +7,13 @@ namespace OpenRouterSharp.Core.Models
     {
         [JsonPropertyName("model")]
         public string Model { get; set; }
+        [JsonPropertyName("stream")]
+        public bool Stream { get; set; }
     }
 
     public class PropmtRequest : BaseChatRequest
     {
-        [JsonPropertyName("prompt")]    
+        [JsonPropertyName("prompt")]
         public string Prompt { get; set; }
     }
     public class ChatRequest : BaseChatRequest
